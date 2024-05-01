@@ -15,8 +15,7 @@ public class AddRemoveElements extends BaseTest {
         driver.findElement(By.xpath("//button[text()='Delete']")).click();
         List<WebElement> elementDelete = driver.findElements(By.xpath("//button[text()='Delete']"));
 
-        boolean result = elementDelete.size() == 1;
-        Assert.assertTrue(result);
+        Assert.assertEquals(elementDelete.size(), 1);
     }
 
 }
