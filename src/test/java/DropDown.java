@@ -19,10 +19,9 @@ public class DropDown extends BaseTest {
         Assert.assertTrue(elements.get(2).isDisplayed(), "Наличие 3го елемента");
 
         select.selectByIndex(1);
-        Assert.assertTrue(elements.get(1).isSelected(), "Первый элемент выбран");
+        Assert.assertEquals("Option 1", select.getFirstSelectedOption().getText(), "Текст второго выбранного элемента");
 
         select.selectByIndex(2);
-        Assert.assertTrue(elements.get(2).isSelected(), "Второй элемент выбран");
-
+        Assert.assertEquals("Option 2", select.getFirstSelectedOption().getText(), "Текст третьего выбранного элемента");
     }
 }
